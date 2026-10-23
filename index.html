@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultoría Digital | Mario Hernández Padial</title>
+  <meta name="description" content="Diagnóstico, plataformas de datos, automatizaciones, paneles, webs y desarrollo a medida para negocios de Granada.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          colors: {
+            dark: '#0e1013',
+            surface: '#15181e',
+            card: '#1b1f26',
+            border: '#2a2f3a',
+            accent: '#ffffff',
+            muted: '#8e96a5'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans for high legibility -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #0e1013;
+      color: #f0f2f5;
+    }
+
+    /* Editorial display text scale */
+    .hero-title-huge {
+      font-size: clamp(3.2rem, 9.5vw, 10.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+    }
+
+    .section-title-huge {
+      font-size: clamp(2.2rem, 6vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+
+    /* Subtle hair-lines */
+    .border-hairline {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Image zoom hover effect */
+    .img-frame img {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .img-frame:hover img {
+      transform: scale(1.04);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0e1013;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a2f3a;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #404756;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col relative selection:bg-white selection:text-black antialiased">
+
+  <!-- HEADER -->
+  <header class="w-full border-b border-hairline sticky top-0 bg-[#0e1013]/90 backdrop-blur-md z-40">
+    <div class="max-w-[1600px] mx-auto px-6 sm:px-12 h-16 sm:h-20 flex items-center justify-between text-xs tracking-wider uppercase font-medium">
+      
+      <!-- Brand Name -->
+      <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+        <span class="text-sm font-bold tracking-tight text-white">MARIO HERNÁNDEZ PADIAL</span>
+      </a>
+
+      <!-- Location Clock -->
+      <div class="hidden md:flex items-center gap-3 text-neutral-400">
+        <span id="liveClock">--:-- CET</span>
+        <span class="text-neutral-600">•</span>
+        <span>GRANADA, ESPAÑA</span>
+      </div>
+
+      <!-- Action -->
+      <a href="https://wa.me/34601613299" target="_blank" rel="noopener noreferrer" class="hover:text-white text-neutral-300 transition-colors flex items-center gap-1.5 font-semibold">
+        <span>CONTACTO</span>
+        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-1">
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 border-b border-hairline">
+      <div class="max-w-[1600px] mx-auto px-6 sm:px-12">
+        
+        <!-- Hero Title Layout -->
+        <div class="relative">
+          <div class="flex items-center justify-between mb-6 text-xs font-semibold tracking-widest text-neutral-400 uppercase">
+            <span class="hidden sm:inline-block">GRANADA & REMOTO</span>
+          </div>
+
+          <!-- Title Line 1 -->
+          <div class="flex flex-wrap items-baseline justify-between gap-4">
+            <h1 class="hero-title-huge font-extrabold tracking-tight text-white">
+              Consultoría <span class="text-neutral-500 font-light">Digital</span>
+            </h1>
+          </div>
+
+          <!-- Hero Main Content Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mt-8 md:mt-12">
+            
+            <div class="lg:col-span-7">
+              <p class="text-xl sm:text-2xl md:text-3xl font-light text-neutral-200 leading-relaxed max-w-3xl mb-10">
+                HOLA NEGOCIOO! Soy desarrollador de <mark>soluciones digitales</mark> para negocios de todo tipo. Echa un vistazo a mis servicios y vemos qué encaja más para ayudarte. Estoy <mark>abierto a cualquier solución aportable</mark>.
+              </p>
+
+              <!-- Buttons -->
+              <div class="flex flex-wrap items-center gap-4 text-xs font-semibold tracking-wider uppercase">
+                <a href="https://wa.me/34601613299" target="_blank" rel="noopener noreferrer" class="px-7 py-4  bg-white text-black hover:bg-neutral-200 transition-all flex items-center gap-2.5 shadow-lg">
+                  <span>Escríbeme por WhatsApp</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+                
+                <a href="https://codifiko.vercel.app" target="_blank" rel="noopener noreferrer" class="px-7 py-4  bg-white text-black hover:bg-neutral-200 transition-all flex items-center gap-2.5 shadow-lg">
+                  <i data-lucide="globe" class="w-4 h-4 text-neutral-400"></i>
+                  <span>codifiko.vercel.app</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Asymmetric Editorial Image Block -->
+            <div class="lg:col-span-5">
+              <div class="relative img-frame  overflow-hidden border border-hairline aspect-[4/3] lg:aspect-[1/1] bg-neutral-900">
+                <img 
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
+                  alt="Espacio de trabajo" 
+                  class="w-full h-full object-cover grayscale contrast-125 opacity-80"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+<!-- SERVICES SECTION (1 Sola Columna - Diseño Editorial de Autor) -->
+<section class="py-20 md:py-32 border-b border-hairline">
+  <div class="max-w-[1600px] mx-auto px-6 sm:px-12">
+    
+    <!-- Header de la sección -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16 pb-8 border-b border-hairline">
+      <h2 class="section-title-huge font-bold tracking-tight text-white">
+        Servicios
+      </h2>
+      <p class="text-neutral-400 max-w-md text-base sm:text-lg font-light">
+        Soluciones claras y estructuradas según el momento en el que se encuentre tu negocio.
+      </p>
+    </div>
+
+    <!-- Lista vertical en 1 sola columna hacia abajo (Sin cards) -->
+    <div class="divide-y divide-neutral-800/80 border-t border-b border-hairline">
+
+      <!-- SERVICIO 01 -->
+      <article class="py-16 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-1 text-xs font-mono text-neutral-500 tracking-widest">
+          01
+        </div>
+
+        <div class="lg:col-span-5">
+          <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-4">
+            <mark>Diagnóstico</mark> de un proceso
+          </h3>
+          <p class="text-neutral-300 text-lg font-light leading-relaxed">
+            Para cuando algo te quita tiempo o se te escapa de las manos y no sabes por dónde empezar.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6 space-y-6 lg:pl-8 lg:border-l lg:border-neutral-800/60">
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-2">Te sirve si</h4>
+            <p class="text-neutral-200 text-base leading-relaxed">
+              Notas que pierdes tiempo o dinero en compras, citas, inventario o cobros, pero no sabes cuánto.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-3">Incluye</h4>
+            <ul class="space-y-2 text-neutral-300 text-base">
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Una conversación de una hora</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Revisar cómo lo haces hoy</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Un informe corto con 2 o 3 mejoras ordenadas por esfuerzo</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-1">No incluye</h4>
+            <p class="text-neutral-400 text-sm">
+              Aplicar las mejoras, ni revisiones legales o fiscales.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 02 -->
+      <article class="py-16 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-1 text-xs font-mono text-neutral-500 tracking-widest">
+          02
+        </div>
+
+        <div class="lg:col-span-5">
+          <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-4">
+            <mark>Plataformas de datos</mark> a tu medida
+          </h3>
+          <p class="text-neutral-300 text-lg font-light leading-relaxed">
+            Inventario, escandallos, compras, ventas o seguimiento de clientes, en una hoja clara que puedas usar tú solo.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6 space-y-6 lg:pl-8 lg:border-l lg:border-neutral-800/60">
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-2">Te sirve si</h4>
+            <p class="text-neutral-200 text-base leading-relaxed">
+              Llevas las cuentas en un cuaderno, en WhatsApp o en una hoja que ya nadie entiende.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-3">Incluye</h4>
+            <ul class="space-y-2 text-neutral-300 text-base">
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Estructura, fórmulas y avisos sencillos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Una pestaña con instrucciones</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Una sesión de 30 a 45 minutos para aprender a usarla</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 03 -->
+      <article class="py-16 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-1 text-xs font-mono text-neutral-500 tracking-widest">
+          03
+        </div>
+
+        <div class="lg:col-span-5">
+          <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-4">
+            <mark>Automatizaciones</mark> sencillas
+          </h3>
+          <p class="text-neutral-300 text-lg font-light leading-relaxed">
+            Que una tarea repetitiva se haga sola, con herramientas que ya existen.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6 space-y-6 lg:pl-8 lg:border-l lg:border-neutral-800/60">
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-2">Te sirve si</h4>
+            <p class="text-neutral-200 text-base leading-relaxed">
+              Repites siempre lo mismo, por ejemplo: llega una solicitud, la apuntas en una hoja y avisas a alguien.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-3">Incluye</h4>
+            <ul class="space-y-2 text-neutral-300 text-base">
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Un proceso completo, de principio a fin</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Pruebas con casos reales</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Una guía de una página</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 04 -->
+      <article class="py-16 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-1 text-xs font-mono text-neutral-500 tracking-widest">
+          04
+        </div>
+
+        <div class="lg:col-span-5">
+          <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-4">
+            <mark>Paneles e informes</mark>
+          </h3>
+          <p class="text-neutral-300 text-lg font-light leading-relaxed">
+            Los datos que ya tienes, resumidos en una sola vista para que sepas qué funciona.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6 space-y-6 lg:pl-8 lg:border-l lg:border-neutral-800/60">
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-2">Te sirve si</h4>
+            <p class="text-neutral-200 text-base leading-relaxed">
+              Tienes ventas, citas o compras registradas, pero casi nunca las miras.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-3">Incluye</h4>
+            <ul class="space-y-2 text-neutral-300 text-base">
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>De 4 a 6 indicadores que elegimos juntos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Un panel fácil de leer</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Una explicación de 20 minutos</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-1">No incluye</h4>
+            <p class="text-neutral-400 text-sm">
+              Datos en tiempo real ni análisis de por qué pasa lo que pasa.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 05 -->
+      <article class="py-16 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-1 text-xs font-mono text-neutral-500 tracking-widest">
+          05
+        </div>
+
+        <div class="lg:col-span-5">
+          <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-4">
+            <mark>Webs</mark> o <mark>formularios</mark> pequeños
+          </h3>
+          <p class="text-neutral-300 text-lg font-light leading-relaxed">
+            Una página clara con horarios, contacto y lo que ofreces, o un formulario para recibir citas, encargos o consultas.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6 space-y-6 lg:pl-8 lg:border-l lg:border-neutral-800/60">
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-2">Te sirve si</h4>
+            <p class="text-neutral-200 text-base leading-relaxed">
+              No tienes web, la que tienes no se ve bien en el móvil o necesitas un formulario concreto.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-3">Incluye</h4>
+            <ul class="space-y-2 text-neutral-300 text-base">
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Una página adaptada al móvil</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Un formulario o botón de contacto</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Tus textos y datos puestos con cuidado</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 06 -->
+      <article class="py-16 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-1 text-xs font-mono text-neutral-500 tracking-widest">
+          06
+        </div>
+
+        <div class="lg:col-span-5">
+          <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-4">
+            <mark>Desarrollo</mark> a medida
+          </h3>
+          <p class="text-neutral-300 text-lg font-light leading-relaxed">
+            Una aplicación hecha para tu caso, solo cuando de verdad hace falta.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6 space-y-6 lg:pl-8 lg:border-l lg:border-neutral-800/60">
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-2">Te sirve si</h4>
+            <p class="text-neutral-200 text-base leading-relaxed">
+              Ya probaste una hoja o una herramienta existente y se te quedó corta, y el problema está claro.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-3">Incluye</h4>
+            <ul class="space-y-2 text-neutral-300 text-base">
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Una primera fase de requisitos</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Una primera versión mínima</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-neutral-500">•</span>
+                <span>Un acuerdo escrito sobre alcance y soporte</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+    <!-- INLINE IMAGE BANNER -->
+    <section class="border-b border-hairline bg-neutral-900/30 overflow-hidden">
+      <div class="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-12 items-center">
+        
+        <div class="md:col-span-7 p-8 sm:p-16">
+          <span class="text-xs font-semibold uppercase tracking-widest text-neutral-400 block mb-3">Enfoque claro</span>
+          <h3 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+            Código limpio, procesos claros, resultados directos.
+          </h3>
+          <p class="text-neutral-300 text-base max-w-xl leading-relaxed">
+            <mark>Sin complicar innecesariamente las cosas</mark>. Soluciones comprensibles y mantenibles para tu negocio.
+          </p>
+        </div>
+
+        <div class="md:col-span-5 border-t md:border-t-0 md:border-l border-hairline">
+          <div class="img-frame relative aspect-[4/3] bg-neutral-900 overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" 
+              alt="Estructura minimalista" 
+              class="w-full h-full object-cover grayscale contrast-125 opacity-70"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FOOTER / CONTACT SECTION -->
+    <section class="py-24 md:py-36 bg-[#0a0c0e] relative">
+      <div class="max-w-[1600px] mx-auto px-6 sm:px-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+          
+          <div class="lg:col-span-8">
+            <span class="text-xs font-semibold uppercase tracking-widest text-neutral-400 block mb-4">03. Contacto directo</span>
+            <h2 class="hero-title-huge font-extrabold tracking-tight text-white mb-6">
+              ¿Hablamos?
+            </h2>
+            <p class="text-xl sm:text-2xl text-neutral-300 font-light max-w-2xl leading-relaxed mb-10">
+              Escríbeme y te propongo un rato corto para conocer tu negocio. Sin compromiso.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-wider">
+              <a href="https://wa.me/34601613299" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-white text-black font-bold hover:bg-neutral-200 transition-all flex items-center gap-2.5 shadow-lg">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                <span>WhatsApp 601 61 32 99</span>
+              </a>
+
+
+              <a href="https://codifiko.vercel.app" target="_blank" rel="noopener noreferrer" class="px-6 py-4  bg-white text-black font-bold hover:bg-neutral-200 transition-all flex items-center gap-2.5 shadow-lg">
+                <i data-lucide="globe" class="w-4 h-4 text-neutral-400"></i>
+                <span>codifiko.vercel.app</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Legal & copyright -->
+          <div class="lg:col-span-4 lg:text-right pt-8 border-t lg:border-t-0 border-hairline">
+            <p class="text-xs text-neutral-400 uppercase leading-relaxed mb-6">
+              Los precios se acuerdan por escrito antes de empezar, con y sin impuestos.
+            </p>
+            <div class="text-[11px] text-neutral-500 uppercase tracking-wider font-medium">
+              © MARIO HERNÁNDEZ PADIAL • GRANADA, ESPAÑA
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-white text-black text-xs font-bold px-5 py-3 tracking-wider uppercase rounded-lg shadow-2xl flex items-center gap-3">
+      <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+      <span id="toastMsg">¡Número copiado!</span>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Realtime Granada Clock
+    function updateClock() {
+      const now = new Date();
+      const options = { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', hour12: false };
+      const timeString = new Intl.DateTimeFormat('es-ES', options).format(now);
+      const clockElem = document.getElementById('liveClock');
+      if (clockElem) {
+        clockElem.textContent = timeString + ' CET';
+      }
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // Copy Phone Number Functionality
+    const copyPhoneBtn = document.getElementById('copyPhoneBtn');
+    const toast = document.getElementById('toast');
+
+    copyPhoneBtn.addEventListener('click', () => {
+      const phoneNumber = "601613299";
+      
+      const dummy = document.createElement("input");
+      document.body.appendChild(dummy);
+      dummy.value = phoneNumber;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
+
+      // Trigger Toast
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    });
+  </script>
+
+</body>
+</html>
